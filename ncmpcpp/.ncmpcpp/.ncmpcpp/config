@@ -1,0 +1,36 @@
+mpd_host =                  "127.0.0.1"
+mpd_port =                  "6600"	
+mpd_music_dir =             "/external/media/music/"
+
+browser_display_mode = "columns"
+incremental_seeking = "yes"
+autocenter_mode = "yes"
+follow_now_playing_lyrics = "yes"
+ignore_leading_the = "yes"
+
+colors_enabled = "yes"
+progressbar_look = "▃▃▃"
+
+titles_visibility = "no"
+header_visibility = "no"
+statusbar_visibility = "yes"
+
+#color1 = "white"
+#color2 = "black"
+locked_screen_width_part = "60"
+
+progressbar_elapsed_color = "white"
+progressbar_color = "black"
+
+song_list_format = " $7%l  $2%t $R$5%a "
+now_playing_prefix = "$b"
+now_playing_suffix = "$8$/b"
+song_columns_list_format = "(6)[]{} (23)[red]{a} (26)[yellow]{t|f} (40)[green]{b} (4)[blue]{l}"
+song_status_format = "$b$7♫ $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
+song_window_title_format = " {%a} - {%t}"
+user_interface = "classic"
+playlist_shorten_total_times = "yes"
+playlist_display_mode = "classic"
+
+current_item_prefix = "$(white)$r"
+current_item_suffix = "$/r$(end)"

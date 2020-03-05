@@ -1,14 +1,10 @@
-:let packagedir = $VIM_PLUGIN_PATH
-:let basedir = $VIM_BASE_PATH
+":let packagedir = $VIM_PLUGIN_PATH
+":let basedir = $VIM_BASE_PATH
 
 let g:vimwiki_list = [
     \{'path': '~/wiki/index.wiki'}
 \]
 
-" let &runtimepath.=','.string(packagedir)
-let &runtimepath.=','.escape(expand('<sfile>:p:h'), '\,')
-let g:loaded_python_provide=1
-" let g:python_host_prog = '/usr/bin/python'
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
 
 syntax on
@@ -17,7 +13,7 @@ filetype plugin indent on
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-call plug#begin(packagedir)
+call plug#begin('~/.vim/plugged')
 
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'scrooloose/nerdtree'
