@@ -100,3 +100,20 @@ source $ZSH/oh-my-zsh.sh
 #
 . "$HOME/.aliases.sh"
 . "$HOME/.functions.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
+export GPG_TTY=$(tty)
+if [[ -n "$SSH_CONNECTION" ]] ;then
+  export PINENTRY_USER_DATA="USE_CURSES=1"
+fi
+
+if hash thefuck 2>/dev/null; then
+  eval $(thefuck --alias)
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
