@@ -8,7 +8,7 @@ alias ...="cd ../.."
 alias g="git"
 
 # Enable aliases to be sudo’ed
-alias sudo='sudo '
+# alias sudo='sudo '
 
 # Get week number
 alias week='date +%V'
@@ -36,3 +36,11 @@ if type hub &> /dev/null; then
 fi
 
 alias vim='nvim'
+alias checkrootkits="sudo rkhunter --update; sudo rkhunter --propupd; sudo rkhunter --check"
+alias checkvirus="sudo freshclam && clamscan --recursive=yes --infected /home"
+
+alias gc="git commit -m"
+alias gaa="git add --all"
+alias gp="git push"
+alias systemctl="sudo systemctl"
+alias pacman="sudo pacman"

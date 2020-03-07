@@ -42,3 +42,15 @@ function stopwatch(){
    echo ""
 }
 
+function manwww() {
+	curl -skL "$*" | pandoc -s -f html -t man | man -l -
+}
+
+function md() {
+    pandoc -s -f markdown -t man "$*" | man -l -
+}
+
+function short() {
+  curl -F"shorten=$*" https://0x0.st
+}
+
