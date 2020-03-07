@@ -2,7 +2,7 @@
 background = ${xrdb:background:#222}
 foreground = ${xrdb:foreground:#222}
 foreground-alt = ${xrdb:color7:#222}
-primary = ${xrdb:primary:#222}
+primary = ${xrdb:color9:#222}
 secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
@@ -15,63 +15,286 @@ dpi-y = ${xrdb:Xft.dpi:96}
 bottom = false
 width = 100%
 height = 40
+padding = 0 
+line-size = 3
 #background = ${colors.background}
 #foreground = ${colors.foreground}
+
+border-top-size = 5 
+border-bottom-size = 5
+border-right-size = 10
+border-left-size = 10
+border-size = 0
+border-color = #33000000
+background = #33000000
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = VT323:size=14;2
-;font-0 = FuraCode Nerd Font Mono:size=18;2
+font-0 = VT323 Nerd Font:size=14;2
+font-1 = FuraCode Nerd Font Mono:size=14;2
 
-modules-left = i3
-modules-center = date
-modules-right = filesystem volume mpris
+modules-left = powermenu pulseaudio backlight-acpi 
+modules-center = i3
+;modules-center = xwindow
+modules-right = memory cpu battery wlan date
 
-tray-position = right
+tray-position = hidden
+
+[module/xwindow]
+type = internal/xwindow
+format-foreground = ${colors.foreground}
+label = %title%
+label-maxlen = 80
 
 [module/i3]
 type = internal/i3
 
-label-focused = %index%
-label-focused-foreground = ${colors.foreground}
-label-focused-background = ${colors.primary}
-label-focused-padding = 1
+format = <label-state> <label-mode>
+index-sort = false
+wrapping-scroll = false
 
-label-unfocused = %index% 
-label-unfocused-padding = 1
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;;
+ws-icon-6 = 7;;
+ws-icon-7 = 8;;
+ws-icon-8 = 9;;
+ws-icon-default = 
 
-label-urgent = %index% *
-label-urgent-foreground = ${colors.foreground}
+#label-mode-padding = 2
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = @%index%
+label-focused-background = 
+label-focused-foreground = ${colors.primary}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = @%index%
+label-unfocused-padding = 2
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-underline = 
+
+; visible = Active workspace on unfocused monitor
+label-visible = @%index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = @%index%*
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label =  %percentage%%
+label-foreground = ${colors.foreground}
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = ${colors.foreground}
+bar-indicator-font = 
+bar-fill = ─
+bar-fill-font = 4
+bar-fill-foreground = #ffffff
+bar-empty = ─
+bar-empty-font = 4
+bar-empty-foreground = ${colors.foreground-alt}
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
 
 [module/date]
 type = internal/date
-interval = 1.0
+interval = 5
 
-date = %A %D
-time = %r
+date =
+date-alt = " %Y-%m-%d"
 
-format = <label>
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix =  
+format-prefix-foreground = ${colors.foreground}
+format-underline = 
+format-foreground = ${colors.foreground}
+
 label = %date% %time%
 
-[module/mpris]
-type = custom/script
-exec = $HOME/.config/polybar/scripts/mpris.sh
-interval = 3
-click-left = playerctl previous
-click-right = playerctl next
-click-middle = playerctl play-pause
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " CPU "
+format-prefix-foreground = ${colors.foreground}
+format-underline = 
+label = %percentage:2%%
+label-foreground = ${colors.foreground}
 
-[module/volume]
-type = internal/volume
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " RAM "
+format-prefix-foreground = ${colors.foreground}
+format-underline = 
+label = %percentage_used%%
+label-foreground = ${colors.foreground}
 
-format-volume = <ramp-volume> <label-volume>
+[module/wlan]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
 
-ramp-volume-0 = 奔 
-ramp-volume-1 = 奔
-ramp-volume-2 = 墳
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = 
+label-connected = %essid%
+label-connected-foreground = ${colors.foreground}
 
-; vim:ft=dosini
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
 
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume =   <label-volume> <bar-volume>
+format-volume-foreground = ${colors.foreground}
+label-volume = %percentage%%
+label-volume-foreground = ${colors.foreground}
+
+label-muted =  mute 
+label-muted-foreground = ${colors.secondary}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #B2535B
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 4
+bar-volume-fill = ─
+bar-volume-fill-font = 4
+bar-volume-empty = ─
+bar-volume-empty-font = 4
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = 
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = "  "
+format-full-prefix-foreground = ${colors.foreground}
+format-full-underline = ${self.format-charging-underline}
+format-full-foreground = ${colors.foreground}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+;animation-charging-1 = 
+;animation-charging-2 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+;animation-discharging-1 = 
+;animation-discharging-2 = 
+animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-foreground = ${colors.foreground}
+format-underline = 
+format-warn = <ramp> <label-warn>
+format-warn-underline = 
+
+label =  TEMPERATURE %temperature-c%
+label-warn =  TEMPERATURE %temperature-c%
+label-warn-foreground = ${colors.secondary}
+label-foreground = ${colors.foreground}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+
+label-open = "  "
+label-open-foreground = ${colors.foreground}
+label-close = "  cancel"
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
