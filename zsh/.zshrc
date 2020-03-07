@@ -101,6 +101,20 @@ source $ZSH/oh-my-zsh.sh
 . "$HOME/.aliases.sh"
 . "$HOME/.functions.sh"
 
+# Load all files from .shell/zshrc.d directory
+if [ -d $HOME/.shellrc/zshrc.d ]; then
+  for file in $HOME/.shellrc/zshrc.d/*.zsh; do
+    source $file
+  done
+fi
+
+# Load all files from .shell/rc.d directory
+if [ -d $HOME/.shellrc/rc.d ]; then
+  for file in $HOME/.shellrc/rc.d/*.sh; do
+    source $file
+  done
+fi
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -116,12 +130,14 @@ if hash thefuck 2>/dev/null; then
   eval $(thefuck --alias)
 fi
 
+export EDITOR="nvim"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.env.sh ] && source ~/.env.sh
 [ -f ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
- export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
- ZSH_HIGHLIGHT_STYLES[default]='none'
+ZSH_HIGHLIGHT_STYLES[default]='none'
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=blue'
@@ -144,3 +160,11 @@ ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[assign]='none'
+
+
+autoload -U zcalc
+function __calc_plugin {
+    zcalc -e "$*"
+}
+aliases[calc]='noglob __calc_plugin'
+aliases[=]='noglob __calc_plugin'
