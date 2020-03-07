@@ -1,0 +1,46 @@
+#!/bin/bash
+
+
+# # PushN
+#
+# Simple push notifier for pushover.net
+#
+# ## Usage:
+#
+# `echo "foo bar" | pushn`
+# `echo pushn "foo bar"``
+#
+# ## Setup:
+#
+# Run the command for the first time to create a config
+
+CONFIG_LOCATION="$HOME/.pushconfig"
+
+
+if [ ! -f "$CONFIG_LOCATION" ]; then
+  echo "No settings file in $CONFIG_LOCATION"
+  echo -n "App Token: "
+  read APP_TOKEN
+  echo -n "User key: "
+  read USER_KEY
+  echo "
+APP_TOKEN=$APP_TOKEN
+USER_KEY=$USER_KEY
+  " > "$CONFIG_LOCATION"
+  chmod 600 "$CONFIG_LOCATION"
+fi
+
+source "$CONFIG_LOCATION"
+
+if [[ ! -z "$1" ]]; then
+  MESSAGE="$USER@$HOSTNAME: $1"
+else
+  MESSAGE="$USER@$HOSTNAME: $(</dev/stdin)"
+  echo $MESSAGE
+fi
+
+curl -s \
+  --form-string "token=$APP_TOKEN" \
+  --form-string "user=$USER_KEY" \
+  --form-string "message=$MESSAGE" \
+  https://api.pushover.net/1/messages.json > /dev/null

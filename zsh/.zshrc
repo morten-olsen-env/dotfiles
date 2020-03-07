@@ -117,3 +117,5 @@ if hash thefuck 2>/dev/null; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.env.sh ] && source ~/.env.sh
+ export PATH="$PATH:$HOME/.local/bin"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+twilio api:core:messages:create --to "$PHONE_NUMBER" --from morten --body "$@"
