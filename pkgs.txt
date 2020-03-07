@@ -1,0 +1,16 @@
+neovim
+i3-gaps
+polybar
+tmux
+zathura
+zsh
+feh
+picom
+xss-lock
+dmenu
+i3lock
+unclutter
+polybar
+rxvt-unicode
+rxvt-unicode-terminfo
+urxvt-perls
