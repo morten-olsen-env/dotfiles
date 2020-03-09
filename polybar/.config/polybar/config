@@ -37,7 +37,7 @@ font-1 = FuraCode Nerd Font Mono:size=14;2
 modules-left = powermenu pulseaudio backlight-acpi 
 modules-center = i3
 ;modules-center = xwindow
-modules-right = memory cpu battery wlan date
+modules-right = memory cpu battery wlan xkeyboard date
 
 tray-position = hidden
 
@@ -46,6 +46,9 @@ type = internal/xwindow
 format-foreground = ${colors.foreground}
 label = %title%
 label-maxlen = 80
+
+[module/xkeyboard]
+type = internal/xkeyboard
 
 [module/i3]
 type = internal/i3

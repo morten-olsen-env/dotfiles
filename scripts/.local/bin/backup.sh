@@ -22,6 +22,7 @@ ADD_PATH /etc/pkglist.txt
 ADD_PATH /etc/pacman.d/hooks/pkglist.hook
 ADD_PATH /etc/ssh/sshd_config
 ADD_PATH /etc/systemd/system/verdaccio.service
+ADD_PATH /etc/X11/xorg.conf.d/45-libinput-touchpad.conf
 
-# rsync -zza "$TARGET/" "gaia:~/.backup/$HOSTNAME/"
+rsync -zza "$TARGET/" "gaia:~/.backup/$HOSTNAME/"
 
