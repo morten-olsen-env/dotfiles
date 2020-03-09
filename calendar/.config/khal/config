@@ -1,0 +1,16 @@
+[calendars]
+
+  [[home]]
+    path = "~/.calendars/1bc17526-ab52-12ee-1080-735e8f1b97a3/"
+    color = dark green
+    priority = 30
+
+  [[cille]]
+    path = "~/.calendars/d8df8417-00e4-e405-cf1c-e8fe69d24b12/"
+    color = dark red
+    priority = 20
+
+  [[sampension]]
+    path = "~/.calendars/5653bee5-988c-c65b-1325-b9a17e7e39f2/"
+    color = brown
+    priority = 10
