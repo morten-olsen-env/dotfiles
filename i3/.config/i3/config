@@ -200,4 +200,3 @@ exec --no-startup-id /usr/bin/unclutter -b
 exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.jpg
-exec --no-startup-id setxkbmap -option ctrl:swapcaps
