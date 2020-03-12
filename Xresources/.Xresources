@@ -75,7 +75,7 @@ URxvt.iso14755: false
 !URxvt*altSendsEscape: true
 
 ! █▓▒░ high dpi mode
-Xft.dpi: 190
+Xft.dpi: 90 
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintfull
