@@ -63,3 +63,4 @@ fi
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 [ -f ~/.env.sh ] && source ~/.env.sh
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
