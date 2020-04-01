@@ -36,13 +36,25 @@
 *.color7:       #707880
 *.color15:      #c5c8c6
 
+! *.font: TerminessTTF Nerd Font:size=12:hinting=full
+*.font: VT323 Nerd Font:style=Regular:size=16:hinting=full
+
 ! █▓▒░ fonts
 URxvt*font: xft:VT323 Nerd Font:style=Regular:size=16:hinting=full, \
-            xft:Fura Code Nerd Font Mono:size=11:antialias=true:hinting=full
+            xft:Fura Code Nerd Font Mono:size=11:antialias=true:hinting=full, \
+            xft:DejaVu Sans:size=11
 
-URxvt*boldFont: 
-URxvt*italicFont: 
-URxvt*bolditalicFont: 
+URxvt*boldFont:  ft:VT323 Nerd Font:style=Regular:size=16:hinting=full, \
+            xft:Fura Code Nerd Font Mono:size=11:antialias=true:hinting=full, \
+            xft:DejaVu Sans:size=11
+
+URxvt*italicFont: xft:VT323 Nerd Font:style=Regular:size=16:hinting=full, \
+            xft:Fura Code Nerd Font Mono:size=11:antialias=true:hinting=full, \
+            xft:DejaVu Sans:size=11
+
+URxvt*bolditalicFont: xft:VT323 Nerd Font:style=Regular:size=16:hinting=full, \
+            xft:Fura Code Nerd Font Mono:size=11:antialias=true:hinting=full, \
+            xft:DejaVu Sans:size=11
 
 URxvt*letterSpace: -1
 URxvt*lineSpace: -1
@@ -71,7 +83,6 @@ URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 
 ! █▓▒░ misc
 URxvt.saveLines: 9999
-URxvt.iso14755: false
 !URxvt*altSendsEscape: true
 
 ! █▓▒░ high dpi mode

@@ -31,7 +31,8 @@ background = #33000000
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = VT323 Nerd Font:size=14;2
+; font-0 = ${font:TerminessTTF Nerd Font:size=12}
+font-0 = ${xrdb:font:TerminessTTF Nerd Font:size=16}
 font-1 = FuraCode Nerd Font Mono:size=14;2
 
 modules-left = powermenu pulseaudio backlight-acpi 

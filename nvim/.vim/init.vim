@@ -28,7 +28,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'mxw/vim-jsx'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'w0rp/ale'
@@ -36,12 +35,9 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/SyntaxRange'
 Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
-Plug 'dikiaap/minimalist'
-Plug 'altercation/vim-colors-solarized'
 Plug 'liuchengxu/vim-which-key'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'severin-lemaignan/vim-minimap'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'pbogut/fzf-mru.vim'
@@ -49,6 +45,7 @@ Plug 'jreybert/vimagit'
 Plug 'lifepillar/vim-solarized8'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'kjwon15/vim-transparent'
+Plug 'vifm/vifm.vim'
 
 
 call plug#end()
@@ -188,6 +185,8 @@ let g:which_key_map.f.w = 'Save file'
 nmap <leader>fw :w!<cr>
 let g:which_key_map.f.o = 'Find file'
 nmap <Leader>fo :Files<CR>
+let g:which_key_map.f.e = 'Explore'
+nmap <Leader>fe :Vifm<CR>
 let g:which_key_map.f.c = 'Change PWD to dir of current buffer'
 map <leader>fc :cd %:p:h<cr>:pwd<cr>
 let g:which_key_map.f.r = 'find-recent-file'
