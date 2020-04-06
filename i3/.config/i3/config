@@ -33,7 +33,6 @@ bindsym $mod+Shift+Return exec firefox
 # start dmenu (a program launcher)
 # bindsym $mod+e exec rofi -show run
 bindsym $mod+e exec dmenu_run
-bindsym $mod+d exec --no-startup-id dmenu_run -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg" -fn "SauceCodePro Nerd Font Mono-13"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -54,10 +53,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-# bindsym $mod+h split h
+ bindsym $mod+| split h
 
 # split in vertical orientation
-# bindsym $mod+v split v
+ bindsym $mod+- split v
 
 # toggle split orientation
 bindsym $mod+BackSpace split toggle
@@ -66,9 +65,9 @@ bindsym $mod+BackSpace split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+a layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -156,6 +155,9 @@ set $alt #00ff9f
 set_from_resource $fg i3wm.foreground $primary
 set_from_resource $bg i3wm.background #f0f0f0
 set_from_resource $pr i3wm.primary #fff0f0
+
+#bindsym $mod+d exec --no-startup-id dmenu_run -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg" -fn "VT323 Nerd Font-16"
+bindsym $mod+d exec --no-startup-id rofi -combi-mode window#drun#ssh#combi -font "VT323 Nerd Font 26" -show combi
 
 #set $fg #ff0000
 #set $bg #000000

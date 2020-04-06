@@ -98,3 +98,17 @@ twobwm.enable_compton: true
 
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+
+rofi.modi:          window,drun,run
+rofi.sidebar-mode:  true
+rofi.theme:         ~/.config/rofi/sidestyle.rasi
+rofi.show-icons:    false
+rofi.drun-icon-theme: Papirus-Dark
+rofi.kb-row-up:                      Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab
+rofi.kb-row-down:                    Down,Control+j
+rofi.kb-accept-entry:                Control+m,Return,KP_Enter
+rofi.terminal:                       mate-terminal
+rofi.kb-remove-to-eol:               Control+Shift+e
+rofi.kb-mode-next:                   Shift+Right,Control+Tab,Control+l
+rofi.kb-mode-previous:               Shift+Left,Control+Shift+Tab,Control+h
+rofi.kb-remove-char-back:            BackSpace
