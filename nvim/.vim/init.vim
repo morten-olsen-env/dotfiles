@@ -46,6 +46,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'kjwon15/vim-transparent'
 Plug 'vifm/vifm.vim'
+Plug 'tpope/vim-commentary'
 
 
 call plug#end()

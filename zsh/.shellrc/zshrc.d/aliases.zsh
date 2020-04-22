@@ -1,6 +1,3 @@
-
-#!/usr/bin/env bash
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -23,17 +20,11 @@ command -v sha1sum > /dev/null || alias sha1sum="shasum"
 alias path='echo -e ${PATH//:/\\n}'
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null; then
-	if type complete &> /dev/null; then
-		complete -o default -o nospace -F _git g;
-	fi
-fi;
+command -v _git > /dev/null && command -v complete > /dev/null && complete -o default -o nospace -F _git g
 
 alias copy='xsel -ib'
 
-if type hub &> /dev/null; then
-	eval "$(hub alias -s)"
-fi
+command -v hub > /dev/null && eval "$(hub alias -s)"
 
 alias checkrootkits="sudo rkhunter --update; sudo rkhunter --propupd; sudo rkhunter --check"
 alias checkvirus="sudo freshclam && clamscan --recursive=yes --infected /home"
