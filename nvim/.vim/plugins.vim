@@ -1,0 +1,7 @@
+Plug 'jceb/vim-orgmode'
+Plug 'vim-scripts/utl.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-speeddating'
+Plug 'chrisbra/NrrwRgn'
+Plug 'mattn/calendar-vim'
+Plug 'inkarkat/vim-SyntaxRange'

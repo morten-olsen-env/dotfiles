@@ -50,6 +50,9 @@ Plug 'vifm/vifm.vim'
 
 call plug#end()
 
+packloadall
+silent! helptags ALL
+
 let g:jsx_ext_required = 0
 autocmd FileType octave setlocal keywordprg=xterm\ -fa\ 'DejaVu\ Sans\ Mono:style=Book'\ -fs\ 12\ -geometry\ 80x50\ -e\ info\ octave\ --vi-keys\ --index-search
 
