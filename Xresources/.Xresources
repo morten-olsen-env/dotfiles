@@ -36,12 +36,11 @@
 *.color7:       #707880
 *.color15:      #c5c8c6
 
-! *.font: TerminessTTF Nerd Font:size=12:hinting=full
-*.font: VT323 Nerd Font:style=Regular:size=16:hinting=full
+*.font: Hack Nerd Font:size=8:hinting=full
+! *.font: VT323 Nerd Font:style=Regular:size=16:hinting=full
 
 ! █▓▒░ fonts
-URxvt*font: xft:VT323 Nerd Font:style=Regular:size=16:hinting=full, \
-            xft:Fura Code Nerd Font Mono:size=11:antialias=true:hinting=full, \
+URxvt*font: xft:Hack Nerd Font Mono:size=11:antialias=true:hinting=full, \
             xft:DejaVu Sans:size=11
 
 URxvt*boldFont:  ft:VT323 Nerd Font:style=Regular:size=16:hinting=full, \
