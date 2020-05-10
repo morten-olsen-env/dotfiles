@@ -32,13 +32,8 @@ Plug 'bluz71/vim-moonfly-colors'
 Plug 'kjwon15/vim-transparent'
 Plug 'vifm/vifm.vim'
 Plug 'tpope/vim-commentary'
-Plug 'jceb/vim-orgmode'
-Plug 'vim-scripts/utl.vim'
-Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-speeddating'
-Plug 'chrisbra/NrrwRgn'
-Plug 'mattn/calendar-vim'
-Plug 'inkarkat/vim-SyntaxRange'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-markdown'
 
 call plug#end()
 
