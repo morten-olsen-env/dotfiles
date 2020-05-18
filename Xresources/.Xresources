@@ -2,7 +2,8 @@
 *.foreground:   #fefefe
 *.background:   #1d1f21
 *.cursorColor:  #c5c8c6
-*.primary:      #5f819d
+!*.primary:      #5f819d
+*.primary:      red
 
 ! black
 *.color0:       #282a2e

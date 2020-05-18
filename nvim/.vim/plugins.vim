@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mxw/vim-jsx'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'mhinz/vim-startify'
 Plug 'w0rp/ale'
 Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/SyntaxRange'

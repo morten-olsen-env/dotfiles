@@ -3,6 +3,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias g="git"
+alias ls="lsd"
+alias cat="bat"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
