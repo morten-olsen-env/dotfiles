@@ -100,4 +100,10 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=manual
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+" Force rescan of js/tsx files (hurts performance)
+" autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+" autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+set foldmethod=syntax
+set foldlevel=99
 

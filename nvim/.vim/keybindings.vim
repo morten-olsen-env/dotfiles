@@ -34,5 +34,8 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <c-space> ?
+nmap X :bd<cr>
 
+" Show COC tool tips
+nnoremap <silent> K :call CocAction('doHover')<CR>
 

@@ -11,6 +11,8 @@ let g:which_key_map['h'] = { 'name': 'which_key_ignore' }
 let g:which_key_map[','] = { 'name': 'which_key_ignore' }
 let g:which_key_map['/'] = { 'name': 'which_key_ignore' }
 let g:which_key_map['a'] = { 'name': 'which_key_ignore' }
+let g:which_key_map[','] = { 'name': 'which_key_ignore' }
+let g:which_key_map['M'] = { 'name': 'which_key_ignore' }
 
 let g:which_key_map['!'] = 'ripgrep'
 nnoremap <Leader>!  :Rg!<cr>
@@ -32,7 +34,7 @@ nmap <leader>fw :w!<cr>
 let g:which_key_map.f.o = 'Find file'
 nmap <Leader>fo :Files<CR>
 let g:which_key_map.f.e = 'Explore'
-nmap <Leader>fe :Vifm<CR>
+nmap <Leader>fe :Ranger<CR>
 let g:which_key_map.f.c = 'Change PWD to dir of current buffer'
 map <leader>fc :cd %:p:h<cr>:pwd<cr>
 let g:which_key_map.f.r = 'find-recent-file'
@@ -59,6 +61,8 @@ let g:which_key_map.m.p = 'Toggle paste mode'
 map <leader>mp :setlocal paste!<cr>
 let g:which_key_map.m.s = 'Toggle spell checking'
 map <leader>ms :setlocal spell!<cr>
+let g:which_key_map.m.r = 'Reload config'
+map <leader>mr :source ~/.vimrc<cr>
 
 let g:which_key_map['g'] = { 'name': 'git' }
 let g:which_key_map.g.n = 'git-next-hunk'
@@ -77,23 +81,20 @@ nmap <silent> <leader>cgd <Plug>(coc-definition)
 nmap <silent> <leader>cgy <Plug>(coc-type-definition)
 nmap <silent> <leader>cgi <Plug>(coc-implementation)
 
+nmap <leader>cle :<C-u>CocList diagnostics<cr>
+nmap <leader>cls :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>clc  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>clx  :<C-u>CocList extensions<cr>
+
+nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
+
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-vmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" vmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
 nmap <leader>ca  <Plug>(coc-codeaction)
-" Fix autofix problem of current line
-" Show all diagnostics
-nnoremap <silent> <leader>cdn  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <leader>cem  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <leader>ccs  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <leader>cso  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>css :<C-u>CocList -I symbols<cr>
+
 " Do default action for next item.
 nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
 " Do default action for previous item.
@@ -101,7 +102,6 @@ nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <leader>cr  :<C-u>CocListResume<CR>
 nmap <leader>cfc  <Plug>(coc-fix-current)
-nmap <leader>cfa <Plug>(coc-codeaction)
 nmap <silent> csr <Plug>(coc-references)
 " Remap for rename current word
 nmap <leader>cr <Plug>(coc-rename)
