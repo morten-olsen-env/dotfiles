@@ -3,8 +3,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias g="git"
-alias ls="lsd"
+alias ls="exa"
 alias cat="bat"
+alias mutt="neomutt"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -24,20 +25,9 @@ alias path='echo -e ${PATH//:/\\n}'
 # Enable tab completion for `g` by marking it as an alias for `git`
 command -v _git > /dev/null && command -v complete > /dev/null && complete -o default -o nospace -F _git g
 
-alias copy='xsel -ib'
+command -v xsel > /dev/null || alias copy='xsel -ib'
+command -v urxvt > /dev/null || alias n="setsid urxvt &>/dev/null"
 
-command -v hub > /dev/null && eval "$(hub alias -s)"
-
-alias checkrootkits="sudo rkhunter --update; sudo rkhunter --propupd; sudo rkhunter --check"
-alias checkvirus="sudo freshclam && clamscan --recursive=yes --infected /home"
-
-alias gc="git commit -m"
-alias gaa="git add --all"
-alias gp="git push"
-alias gs="git s"
-alias systemctl="sudo systemctl"
-alias pacman="sudo pacman"
-alias n="setsid urxvt &>/dev/null"
-alias update="yay -Syu && npm upgrade -g"
+alias sc="sudo systemctl"
 alias usermount="sudo mount -o gid=users,fmask=113,dmask=002"
 alias fzf="fzf --preview 'bat {} --line-range 0:100 --color always'"
