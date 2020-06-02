@@ -39,3 +39,4 @@ nmap X :bd<cr>
 " Show COC tool tips
 nnoremap <silent> K :call CocAction('doHover')<CR>
 
+inoremap <C-d> <Esc>
