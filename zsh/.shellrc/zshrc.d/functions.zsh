@@ -1,28 +1,7 @@
-#/!bin/sh
-
 function unlock() {
   if [ -z "$BW_SESSION" ]; then
     export BW_SESSION=`bw unlock --raw`
   fi
-}
-
-function getpass() {
-  unlock
-  PASS=`bw get password $1`
-  echo "$PASS"
-}
-
-function getpassitem() {
-  unlock
-  ID=$1
-  PASS=`bw get item "$ID" | fx "i => i.login.password"`
-  echo "$PASS"
-}
-
-function findpass() {
-  unlock
-  bw list items --search "$@" | fx 'a => a.filter(i => i.login).map(i => `${i.id}: ${i.login.username}`).join(`
-`)'
 }
 
 function countdown(){
@@ -42,16 +21,12 @@ function stopwatch(){
    echo ""
 }
 
-function manwww() {
-	curl -skL "$*" | pandoc -s -f html -t man | man -l -
-}
-
-function md() {
-    pandoc -s -f markdown -t man "$*" | man -l -
-}
-
 function short() {
   curl -F"shorten=$*" https://0x0.st
+}
+
+function = {
+  echo "$argv" | bc
 }
 
 function git-tree {

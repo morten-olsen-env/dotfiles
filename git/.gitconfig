@@ -12,8 +12,15 @@
 [difftool "nvimdiff"]
 	cmd = "nvim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
 [commit]
-	gpgsign = true
+  gpgsign = true
 [url "https://github.com/"]
 	insteadOf = git@github.com:
 [url "https://"]
 	insteadOf = git://
+
+[core]
+  pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Nord'
+
+[interactive]
+  diffFilter = delta --color-only
+
