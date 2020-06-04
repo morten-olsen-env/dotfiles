@@ -28,7 +28,7 @@ bindsym $mod+Return exec LANG=en_US.UTF-8 urxvt
 # kill focused window
 bindsym $mod+q kill
 bindsym $mod+t kill
-bindsym $mod+Shift+Return exec firefox
+bindsym $mod+Shift+Return exec brave 
 
 # start dmenu (a program launcher)
 # bindsym $mod+e exec rofi -show run
