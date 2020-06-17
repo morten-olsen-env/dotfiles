@@ -13,8 +13,10 @@
 	cmd = "nvim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
 [commit]
   gpgsign = true
-[url "https://github.com/"]
-	insteadOf = git@github.com:
+; [url "https://github.com/"]
+; 	insteadOf = git@github.com:
+[url "git@github.com:"]
+	insteadOf = https://github.com/
 [url "https://"]
 	insteadOf = git://
 
@@ -24,3 +26,5 @@
 [interactive]
   diffFilter = delta --color-only
 
+[pull]
+	ff = only
