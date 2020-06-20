@@ -10,3 +10,12 @@
 [submodule "zsh/.config/zsh/zsh-vim-mode"]
 	path = zsh/.config/zsh/zsh-vim-mode
 	url = https://github.com/softmoth/zsh-vim-mode
+[submodule "zsh/.config/zsh/forgit"]
+	path = zsh/.config/zsh/forgit
+	url = https://github.com/wfxr/forgit
+[submodule "tmux/.tmux/plugins/tp,"]
+	path = tmux/.tmux/plugins/tp,
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm

@@ -1,30 +1,4 @@
 #!/bin/bash
 
-set -e
-ACTION="$1"; shift
-
-GIST_LOCATION="https://gist.githubusercontent.com/morten-olsen/acc9dfc0fe73a0f4815777a328aca284/raw"
-KEYS_LOCATION="$GIST_LOCATION/authorized_keys"
-SIGNATURE_LOCATION="$GIST_LOCATION/signature.asc"
-
-KEY_CONTENT=$(curl "$KEYS_LOCATION")
-
-function verify {
-  TMP_SIGNATURE_LOCATION=$(mktemp)
-  TMP_KEY_LOCATION=$(mktemp)
-  SIGNATURE_CONTENT=$(curl "$SIGNATURE_LOCATION")
-  echo "$KEY_CONTENT" > "$TMP_KEY_LOCATION"
-  echo "$SIGNATURE_CONTENT" > "$TMP_SIGNATURE_LOCATION"
-  gpg --verify "$TMP_SIGNATURE_LOCATION" "$TMP_KEY_LOCATION"
-  echo "Hello"
-}
-
-case "$ACTION" in
-  "sign")
-    echo "$KEY_CONTENT" | gpg --detach-sign --armor | xsel -ib && echo "Signature copied"
-    ;;
-  "update")
-    verify && echo "$KEY_CONTENT" > "$HOME/.ssh/authorized_keys"
-    ;;
-esac
-
+curl https://api.github.com/users/morten-olsen/keys | fx 'i => i.map(a => a.key).join("\n")' > /home/alice/.ssh/authorized_keys
+chmod 600 /home/alice/.ssh/authorized_keys
