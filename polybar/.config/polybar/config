@@ -25,8 +25,8 @@ border-bottom-size = 5
 border-right-size = 10
 border-left-size = 10
 border-size = 0
-border-color = #33000000
-background = #33000000
+border-color = #77000000
+background = #77000000
 
 module-margin-left = 1
 module-margin-right = 1

@@ -37,6 +37,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'mtdl9/vim-log-highlighting'
 
 call plug#end()
 

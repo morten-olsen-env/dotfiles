@@ -203,4 +203,6 @@ exec --no-startup-id /usr/bin/unclutter -b
 # exec --no-startup-id xautolock -time 10 -locker i3lock
 exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id /usr/bin/feh --bg-center ~/pacwall.png
+exec_always --no-startup-id /usr/bin/feh --bg-fill ~/.config/i3/wallpaper.jpg
+exec_always --no-startup-id wal -c
+exec_always --no-startup-id wal -i ~/.config/i3/wallpaper.jpg -a 170
