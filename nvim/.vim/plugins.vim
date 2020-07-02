@@ -38,6 +38,8 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'mtdl9/vim-log-highlighting'
+Plug 'alok/notational-fzf-vim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 

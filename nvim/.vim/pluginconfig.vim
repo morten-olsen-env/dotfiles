@@ -146,3 +146,10 @@ hi tsxEqual guifg=#F99575 ctermfg=Blue
 hi tsxAttrib guifg=#F8BD7F ctermfg=DarkYellow cterm=italic
 
 let g:ranger_map_keys = 0
+
+"""""""""""""""""""""""""""""""""
+" notational-fzf
+"""""""""""""""""""""""""""""""""
+
+let g:nv_search_paths = ['~/wiki', '~/writing', '~/code', 'docs.md' , './notes.md']
+nnoremap <silent> <c-s> :NV<CR>
