@@ -19,6 +19,8 @@
 	insteadOf = https://github.com/sampension/
 [url "git@github.com:morten-olsen/"]
 	insteadOf = https://github.com/morten-olsen/
+[url "git@github.com:morten-olsen-env/"]
+	insteadOf = https://github.com/morten-olsen-env/
 [url "https://"]
 	insteadOf = git://
 
