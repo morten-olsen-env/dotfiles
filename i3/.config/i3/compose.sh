@@ -1,5 +1,5 @@
 killall picom
-picom
-/usr/bin/feh --bg-fill ~/wallpaper.jpg
-wal -c
-wal -i ~/wallpaper.jpg -a 190
+picom &
+#/usr/bin/feh --bg-fill ~/wallpaper.jpg
+/usr/bin/wal -c
+/usr/bin/wal -i ~/wallpaper.jpg -a 180
