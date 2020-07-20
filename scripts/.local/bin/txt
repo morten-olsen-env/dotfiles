@@ -1,0 +1,4 @@
+#!/bin/bash
+
+MESSAGE="$(</dev/stdin)"
+twilio api:core:messages:create --to "$1" --from "${2:-morten}" --body "$MESSAGE"
