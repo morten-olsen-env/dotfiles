@@ -40,6 +40,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'mtdl9/vim-log-highlighting'
 Plug 'alok/notational-fzf-vim'
 Plug 'lervag/vimtex'
+Plug 'dylanaraps/wal.vim'
 
 call plug#end()
 
