@@ -82,7 +82,10 @@ mailboxes =INBOX
 mailboxes =Archive
 mailboxes =Drafts
 mailboxes =Sent
-#
+mailboxes =Folders.Financial
+mailboxes =Folders.Hus
+mailboxes =Folders.Newsletters
+
 # GPG/PGP 
 set pgp_sign_as = 95725F7DB99B3345
 set crypt_use_gpgme = yes

@@ -1,8 +1,8 @@
 
 #text/html; /usr/bin/firefox -private-window %s;copiousoutput 
-application/ics; khal import -a logistics %s
-text/calendar; khal import -a logistics %s
-application/pdf; evince %s
+application/ics; khal import -a home %s
+text/calendar; khal import -a home %s
+application/pdf; /usr/bin/zathura %s
 image/*; tuiimg '%s'
 # text/html; cat %s | pipe2w3m.sh; copiousoutput; needsterminal
 text/html; /usr/bin/w3m -o auto_image=TRUE %s -T text/html; nametemplate=%s.html; copiousoutput; needsterminal

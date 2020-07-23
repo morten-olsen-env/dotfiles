@@ -1,0 +1,13 @@
+"query:Unread Articles:unread = \"yes\"" "~Unread"
+
+# Tech
+https://www.theverge.com/rss/index.xml "~The Verge" "Tech"
+https://feeds.feedburner.com/arstechnica/index "~Arc Technica" "Tech"
+https://www.wired.com/feed/rss "~Wired US" "Tech"
+
+# Comic
+https://xkcd.com/atom.xml "~XKCD" "Comics"
+https://www.commitstrip.com/en/feed/ "~CommitStrip" "Comics"
+http://feeds.feedburner.com/satwcomic "~Scandinavia and the World" "Comics"
+http://feed.dilbert.com/dilbert/daily_strip "~Dilbert" "Comics"
+

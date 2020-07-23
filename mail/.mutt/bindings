@@ -29,8 +29,16 @@ macro index,pager A \
 
 macro index,pager F \
   "<save-message>+Folders.Financial<enter>"  \
-  "move message to the archive"
+  "move message to financial"
 
 macro index,pager I \
   "<save-message>+INBOX<enter>"  \
   "move message to the inbox"
+
+macro index,pager H \
+  "<save-message>+Folders.Hus<enter>"  \
+  "move message to hus"
+
+macro index,pager N \
+  "<save-message>+Folders.Newsletter<enter>"  \
+  "move message to hus"
