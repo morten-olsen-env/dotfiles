@@ -1,5 +1,6 @@
 [colors]
-background = rgba(0, 0, 0, 0.8)
+background = rgba(0, 0, 0, 0.85)
 
 [options]
-font = Monospace 11
+#font = Monospace 11
+font = VT323 Nerd Font 18
