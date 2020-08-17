@@ -1,5 +1,44 @@
 [colors]
-background = rgba(0, 0, 0, 0.85)
+background = rgba(0, 0, 0, 0.7)
+
+# special
+foreground      = #c4c8c5
+foreground_bold = #c4c8c5
+cursor          = #c4c8c5
+#background      = #1d1f21
+
+# black
+color0  = #000000
+color8  = #000000
+
+# red
+color1  = #af0000
+color9  = #af0000
+
+# green
+color2  = #b5bd68
+color10 = #b5bd68
+
+# yellow
+color3  = #f0c574
+color11 = #f0c574
+
+# blue
+color4  = #80a1bd
+color12 = #80a1bd
+
+# magenta
+color5  = #b294ba
+color13 = #b294ba
+
+# cyan
+color6  = #8abdb6
+color14 = #8abdb6
+
+# white
+color7  = #fffefe
+color15 = #fffefe
+
 
 [options]
 #font = Monospace 11

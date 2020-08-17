@@ -42,5 +42,7 @@ Plug 'alok/notational-fzf-vim'
 Plug 'lervag/vimtex'
 Plug 'dylanaraps/wal.vim'
 
+Plug 'Michal-Miko/vim-mono-red'
+
 call plug#end()
 

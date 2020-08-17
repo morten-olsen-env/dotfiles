@@ -28,7 +28,7 @@ bindsym $mod+Return exec LANG=en_US.UTF-8 termite
 # kill focused window
 bindsym $mod+q kill
 bindsym $mod+t kill
-bindsym $mod+Shift+Return exec brave 
+bindsym $mod+Shift+Return exec firefox
 
 # start dmenu (a program launcher)
 # bindsym $mod+e exec rofi -show run
