@@ -8,6 +8,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
+export GITHUB_NPM_TOKEN="foo"
+export NPM_TOKEN="foo"
 
 # Load all files from .shell/zshrc.d directory
 if [ -d $HOME/.shellrc/zshrc.d ]; then
