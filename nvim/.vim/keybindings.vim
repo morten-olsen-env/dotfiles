@@ -2,7 +2,11 @@
 " Non-leader keybindings
 " ===========================
 
-nmap <C-p> :Files<CR>
+nmap <C-p> :CocCommand fzf-preview.ProjectFiles<CR>
+nmap <C-o> :CocCommand fzf-preview.AllBuffers<CR>
+nmap <M-l> :CocCommand fzf-preview.Lines<CR>
+nmap <M-e> :CocCommand fzf-preview.CocDiagnostics<CR>
+nmap <M-r> :CocCommand fzf-preview.CocReferences<CR>
 " Escape search with esc
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 " move among buffers with Meta

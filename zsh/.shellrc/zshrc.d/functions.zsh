@@ -29,6 +29,10 @@ function = {
   echo "$argv" | bc
 }
 
+function ... {
+  cd "$(git rev-parse --show-toplevel)"
+}
+
 function git-tree {
     # tree respecting gitignore
 

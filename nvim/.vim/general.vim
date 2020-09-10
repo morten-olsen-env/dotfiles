@@ -108,4 +108,4 @@ set foldmethod=syntax
 set foldlevel=99
 let g:tex_flavor = "latex"
 
-colorscheme wal
+colorscheme molokai

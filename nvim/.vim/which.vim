@@ -38,7 +38,7 @@ nmap <Leader>fe :Ranger<CR>
 let g:which_key_map.f.c = 'Change PWD to dir of current buffer'
 map <leader>fc :cd %:p:h<cr>:pwd<cr>
 let g:which_key_map.f.r = 'find-recent-file'
-nnoremap <silent> <Leader>fr :FZFMru<CR>
+nnoremap <silent> <Leader>fr :CocCommand fzf-preview.MruFiles<CR>
 
 let g:which_key_map['b'] = { 'name': 'buffers' }
 let g:which_key_map.b.f = 'find buffer'
@@ -102,6 +102,7 @@ nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <leader>cr  :<C-u>CocListResume<CR>
 nmap <leader>cfc  <Plug>(coc-fix-current)
+nmap <silent> csr <Plug>(coc-references)
 nmap <silent> csr <Plug>(coc-references)
 " Remap for rename current word
 nmap <leader>cr <Plug>(coc-rename)

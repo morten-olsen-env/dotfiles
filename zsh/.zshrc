@@ -1,4 +1,4 @@
-[ -f ~/.cache/wal/sequences ] && (cat ~/.cache/wal/sequences &)
+#[ -f ~/.cache/wal/sequences ] && (cat ~/.cache/wal/sequences &)
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
@@ -39,4 +39,7 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 [ -f ~/.env.sh ] && source ~/.env.sh
 hash ruby 2>/dev/null && PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
-export GF_BAT_THEME=Nord
+export GF_BAT_THEME=MonokaiExtended
+export SONAR_SCANNER_HOME="/opt/sonar-scanner"
+export PATH="${PATH}:${SONAR_SCANNER_HOME}/bin"
+

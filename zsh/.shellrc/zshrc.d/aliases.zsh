@@ -1,10 +1,8 @@
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
-alias ...="cd ../.."
 
 alias g="git"
 alias ls="exa"
-alias cat="bat"
 alias mutt="neomutt"
 
 # Enable aliases to be sudo’ed
