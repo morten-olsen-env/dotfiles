@@ -12,19 +12,21 @@ function _get_content {
   echo "$CONTENT"
 }
 
-CONTENT=$(_get_content)
-
 function _edit {
-  echo "$CONTENT" | vipe | gpg --user "$GPG_KEY" --recipient "$GPG_KEY" -o "$SECRET_FILE" --encrypt 
+  CONTENT=$(_get_content)
+  OUTPUT=$(echo "$CONTENT" | vipe)
+  echo "$OUTPUT" | gpg --user "$GPG_KEY" --recipient "$GPG_KEY" -o "$SECRET_FILE" --encrypt 
   chmod 600 "$SECRET_FILE"
 }
 
 function _run {
+  CONTENT=$(_get_content)
   export $(echo $CONTENT | xargs)
   eval "$@"
 }
 
 function _add {
+  CONTENT=$(_get_content)
   echo "$CONTENT
 $1=\"$2\"" | gpg --user "$GPG_KEY" --recipient "$GPG_KEY" -o "$SECRET_FILE" --encrypt
 }

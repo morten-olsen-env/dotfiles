@@ -1,13 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'easymotion/vim-easymotion'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline-themes'
@@ -18,9 +13,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 Plug 'pbrisbin/vim-mkdir'
-Plug 'MattesGroeger/vim-bookmarks'
-Plug 'pbogut/fzf-mru.vim'
-Plug 'jreybert/vimagit'
 Plug 'kjwon15/vim-transparent'
 Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'
@@ -36,6 +28,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'mtdl9/vim-log-highlighting'
 Plug 'alok/notational-fzf-vim'
 Plug 'lervag/vimtex'
+Plug 'zivyangll/git-blame.vim'
+Plug 'sheerun/vim-polyglot'
 
 Plug 'tomasr/molokai'
 Plug 'arcticicestudio/nord-vim'

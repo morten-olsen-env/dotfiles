@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-fzf-preview']
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-fzf-preview', 'coc-omnisharp', 'coc-eslint']
 
 """""""""""""""""""""""""""""
 " COC

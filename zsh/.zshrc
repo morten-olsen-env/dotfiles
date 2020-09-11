@@ -8,8 +8,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
-export GITHUB_NPM_TOKEN="foo"
-export NPM_TOKEN="foo"
+[ -z "$GITHUB_NPM_TOKEN" ] && export GITHUB_NPM_TOKEN="foo"
+[ -z "$NPM_TOKEN" ] && export NPM_TOKEN="foo"
 
 # Load all files from .shell/zshrc.d directory
 if [ -d $HOME/.shellrc/zshrc.d ]; then
@@ -41,7 +41,6 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 [ -f ~/.env.sh ] && source ~/.env.sh
 hash ruby 2>/dev/null && PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
-export GF_BAT_THEME=MonokaiExtended
 export SONAR_SCANNER_HOME="/opt/sonar-scanner"
 export PATH="${PATH}:${SONAR_SCANNER_HOME}/bin"
 
