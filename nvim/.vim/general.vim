@@ -8,11 +8,11 @@ packloadall
 silent! helptags ALL
 
 let g:jsx_ext_required = 0
-autocmd FileType octave setlocal keywordprg=xterm\ -fa\ 'DejaVu\ Sans\ Mono:style=Book'\ -fs\ 12\ -geometry\ 80x50\ -e\ info\ octave\ --vi-keys\ --index-search
 
 "set lbr						" Enable line breaks
 set showbreak=+++	" Wrap-broken line prefix
-set textwidth=100	" Line wrap (number of cols)
+set textwidth=0	" Line wrap (number of cols)
+set wrapmargin=0
 set showmatch	    " Highlight matching brace
 set visualbell	  " Use visual bell (no beeping)
 set incsearch 		" Makes search act like search in modern browsers
@@ -24,14 +24,10 @@ set background=dark
 set autoread
 set ai "Auto indent
 set si "Smart indent
-" set wrap "Wrap lines
+set wrap "Wrap lines
 set scrolloff=999
 set timeoutlen=500
 set foldmethod=manual
-" colorscheme railscasts
-" colorscheme molokai
-" colorscheme dracula
-" colorscheme gruvbox
 highlight Normal ctermbg=NONE
 set number relativenumber
 set nu rnu
@@ -45,10 +41,8 @@ let g:comfortable_motion_friction = 80.0
 let g:comfortable_motion_air_drag = 2.0
 " set wildignore=*.swp,*.bak,*.pyc,*.class
 set hlsearch 
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 set t_Co=256
 set backspace=2 " make backspace work like most other apps
-let g:solarized_termcolors=256
 let mapleader = ","
 let g:airline#extensions#tabline#enabled = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 0
@@ -108,4 +102,4 @@ set foldmethod=syntax
 set foldlevel=99
 let g:tex_flavor = "latex"
 
-colorscheme nord 
+colorscheme nord

@@ -21,6 +21,25 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 """""""""""""""""""""""""""""
+" Vista.vim
+"""""""""""""""""""""""""""""
+
+let g:vista_default_executive = 'coc'
+let g:vista_fzf_preview = ['right:50%']
+
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
+
+set statusline+=%{NearestMethodOrFunction()}
+
+" By default vista.vim never run if you don't call it explicitly.
+"
+" If you want to show the nearest function in your statusline automatically,
+" you can add the following line to your vimrc
+autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+
+"""""""""""""""""""""""""""""
 " Lightline
 """""""""""""""""""""""""""""
 
@@ -32,6 +51,9 @@ let g:lightline = {
       \ 'tabline': {
       \   'left': [ ['buffers'] ],
       \   'right': [ ['close'] ]
+      \ },
+      \ 'component_function': {
+      \   'method': 'NearestMethodOrFunction'
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers'
@@ -95,3 +117,10 @@ nnoremap <silent> <c-s> :NV<CR>
 
 let g:fzf_preview_grep_cmd = 'rg --line-number --no-heading --color=never'
 let g:fzf_preview_use_dev_icons = 1
+
+
+
+"""""""""""""""""""""""""""""""""
+" vim workspaces
+"""""""""""""""""""""""""""""""""
+let g:workspace_session_directory = $HOME . '/.vim/sessions/'
