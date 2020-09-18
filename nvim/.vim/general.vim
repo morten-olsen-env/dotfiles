@@ -39,6 +39,8 @@ set nobackup
 set noswapfile
 let g:comfortable_motion_friction = 80.0
 let g:comfortable_motion_air_drag = 2.0
+set undofile
+set undodir=~/.vim/undodir
 " set wildignore=*.swp,*.bak,*.pyc,*.class
 set hlsearch 
 set t_Co=256
