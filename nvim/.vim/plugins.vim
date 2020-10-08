@@ -16,7 +16,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 Plug 'pbrisbin/vim-mkdir'
- Plug 'kjwon15/vim-transparent'
+Plug 'kjwon15/vim-transparent'
+Plug 'metakirby5/codi.vim'
 " Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdcommenter'
 Plug 'godlygeek/tabular'
