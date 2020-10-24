@@ -8,7 +8,7 @@ _screen() {
   echo "Video $2"
     xwinwrap -ov -ni -g "$1" -- /usr/bin/mpv --fullscreen\
         --no-stop-screensaver \
-        --vo=vaapi --hwdec=vaapi \
+        --vo=vaapi --hwdec=vaapi --loop \
         --no-osc --no-osd-bar -wid WID --no-input-default-bindings \
         "$2"
     PIDs+=($!)
